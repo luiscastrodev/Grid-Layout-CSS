@@ -33,18 +33,36 @@
 
              /* GRID*/
              .gridContainer{
+                 width: 100%;
                  /*Transform to grid layout*/
                  display: grid;
 
                 /* grid-template-columns: 33% 33% 33%;*/
-                grid-template-columns: repeat(3,1fr) ;
+                grid-template-columns: repeat(3,1fr) 100px  ;
 
                  /*witdh row*/
-                 grid-template-rows: 100px 100px;
+                 grid-template-rows: 100px 100px 100px ;
             
-
                 /*Space between coluns*/
-                 grid-column-gap: 10px;
+                 grid-column-gap: 30px 10px;
+
+             }
+
+
+             .gridItem:nth-child(1){
+                background:red;   
+                grid-row-start: 1;
+                grid-row-end:2;
+                grid-column-start: 2;
+                grid-column-end: -1;
+
+                /*atalho*/
+                /*grid-row: 1 / 2;
+                grid-column: 2 / -1;*/
+             }
+
+             .gridItem:nth-child(2){
+                 grid-row:  1 / span 2;
              }
         </style>
 
